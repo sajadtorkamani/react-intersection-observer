@@ -1,8 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { APP_NAME, ROUTES } from '../lib/constants'
 

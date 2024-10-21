@@ -1,11 +1,14 @@
+import { useIntersectionObserver } from '@uidotdev/usehooks'
 import React from 'react'
 import { Button, Container } from 'react-bootstrap'
 import { Helmet } from 'react-helmet'
 
-import PageTitle from '../components/PageTitle'
 import LoremIpsum from '../components/LoremIpsum'
+import PageTitle from '../components/PageTitle'
 
 const Home: React.FC = () => {
+  const [ref, entry] = useIntersectionObserver()
+
   return (
     <>
       <Helmet>
@@ -13,14 +16,17 @@ const Home: React.FC = () => {
       </Helmet>
 
       <Container>
+        <div className="position-fixed top-0 end-0 bg-danger text-white px-4 py-3">
+          Is element visible: {entry?.isIntersecting ? 'Yes' : 'No'}
+        </div>
         <PageTitle>Detect element visibility</PageTitle>
 
         <LoremIpsum count={12} />
 
         <div className="my-3">
-
-        <Button size="lg">This is a button</Button>
-
+          <Button size="lg" ref={ref}>
+            This is a button
+          </Button>
         </div>
 
         <LoremIpsum count={12} />
