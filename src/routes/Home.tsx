@@ -16,8 +16,11 @@ const Home: React.FC = () => {
       </Helmet>
 
       <Container>
-        <div className="position-fixed top-0 end-0 bg-danger text-white px-4 py-3">
-          Is element visible: {entry?.isIntersecting ? 'Yes' : 'No'}
+        <div
+          className="position-fixed top-0 end-0 bg-danger text-white px-4 py-3"
+          style={{ fontSize: '30px' }}
+        >
+          Is button visible: {entry?.isIntersecting ? 'YES' : 'NO'}
         </div>
         <PageTitle>Detect element visibility</PageTitle>
 
