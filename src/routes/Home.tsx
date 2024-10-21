@@ -1,26 +1,32 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Button, Container } from 'react-bootstrap'
 import { Helmet } from 'react-helmet'
 
 import PageTitle from '../components/PageTitle'
+import LoremIpsum from '../components/LoremIpsum'
 
-const Home: React.FC = () => (
-  <>
-    <Helmet>
-      <title>Home</title>
-    </Helmet>
+const Home: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Detect element visibility</title>
+      </Helmet>
 
-    <Container>
-      <PageTitle>Home</PageTitle>
+      <Container>
+        <PageTitle>Detect element visibility</PageTitle>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, est
-        facere fugiat harum incidunt inventore laborum magnam, magni numquam
-        odio possimus quas quidem quisquam quo ratione repellendus sequi
-        voluptatem voluptates.
-      </p>
-    </Container>
-  </>
-)
+        <LoremIpsum count={12} />
+
+        <div className="my-3">
+
+        <Button size="lg">This is a button</Button>
+
+        </div>
+
+        <LoremIpsum count={12} />
+      </Container>
+    </>
+  )
+}
 
 export default Home

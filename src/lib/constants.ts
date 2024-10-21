@@ -1,6 +1,5 @@
-export const APP_NAME = '<App-Name>'
+export const APP_NAME = 'React intersection observer'
 
 export const ROUTES = {
   home: '/',
-  about: '/about',
 }
